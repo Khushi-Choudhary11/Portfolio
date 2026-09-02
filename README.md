@@ -1,16 +1,24 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Khushi Choudhary: a quiet editorial design with a light/dark theme toggle, built with React and Vite.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite
+- Plain CSS via CSS custom properties (no UI framework, no icon library) — theme colors defined in `src/Portfolio.jsx`
 
-## React Compiler
+## Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+npm install
+npm run dev      # start dev server
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+npm run lint     # eslint
+```
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/Portfolio.jsx` — the entire site: layout, content data (projects, skills, experience), theme tokens, and the light/dark toggle
+- `src/main.jsx` / `src/App.jsx` — app entry
+- `public/` — favicon and static assets
