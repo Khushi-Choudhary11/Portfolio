@@ -28,13 +28,6 @@ export const profile = {
     footer: `${base}images/footer.webp`,
   },
 
-  traits: [
-    { title: "Problem Solver", sub: "Curious & Analytical", icon: "brain" },
-    { title: "Builder", sub: "From Ideas to Real Products", icon: "hammer" },
-    { title: "Lifelong Learner", sub: "Always Exploring", icon: "book" },
-    { title: "Impact Driven", sub: "Tech for a Better World", icon: "sparkles" },
-  ],
-
   about: {
     bio: [
       "I'm Khushi Choudhary, a Data Science student at IIT Madras, passionate about building AI-powered solutions that solve real-world problems.",

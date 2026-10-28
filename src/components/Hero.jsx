@@ -1,20 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { profile } from "../data/profile";
-import { projects } from "../data/projects";
-import { NamedIcon, Socials, Sparkle } from "./Icons";
+import { Socials, Sparkle } from "./Icons";
 
 const EASE = [0.22, 1, 0.36, 1];
 const rise = (delay) => ({ initial: { opacity: 0, y: 22 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.65, ease: EASE, delay } });
 
 export default function Hero() {
-  const { cgpa, credits } = profile.education.metrics;
-  const metrics = [
-    { value: `${projects.length}+`, label: "Major Projects" },
-    credits && { value: credits, label: "Credits Completed" },
-    cgpa && { value: cgpa, label: "CGPA" },
-  ].filter(Boolean);
-
   return (
     <section id="home" className="hero">
       <div className="hero-art">
@@ -50,21 +42,6 @@ export default function Hero() {
           <motion.div {...rise(0.46)}><Socials /></motion.div>
         </div>
 
-        <motion.aside className="hero-side" aria-label="At a glance" initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, ease: EASE, delay: 0.5 }}>
-          <ul className="card traits" style={{ listStyle: "none" }}>
-            {profile.traits.map((t) => (
-              <li key={t.title} className="trait">
-                <span className="icon-ring"><NamedIcon name={t.icon} /></span>
-                <span><strong>{t.title}</strong><small>{t.sub}</small></span>
-              </li>
-            ))}
-          </ul>
-          <div className="card metrics" style={{ "--n": metrics.length }}>
-            {metrics.map((m) => (
-              <p key={m.label} className="metric"><b>{m.value}</b><span>{m.label}</span></p>
-            ))}
-          </div>
-        </motion.aside>
       </div>
 
       <p className="hand hero-hand" aria-hidden="true">Ideas · Code · Impact</p>
