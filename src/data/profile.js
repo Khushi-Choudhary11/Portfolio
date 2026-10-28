@@ -53,7 +53,7 @@ export const profile = {
     program: "BS in Data Science and Applications",
     years: "2023 – 2027",
     // Keep these current. Set a value to null to hide that metric.
-    metrics: { cgpa: "8.32", credits: null },
+    metrics: { cgpa: null, credits: null },
     coursework: ["Machine Learning", "Deep Learning", "MLOps", "Software Engineering", "Statistics", "Database Systems"],
     quote: "Learning today, building tomorrow.",
   },
